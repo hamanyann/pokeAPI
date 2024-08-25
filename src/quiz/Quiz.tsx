@@ -17,11 +17,11 @@ const shuffleArray = (array: number[]) => {
 };
 
 const Quiz = ({ onClick }: { onClick: () => void }) => {
-  const [quiz1, setQuiz1] = useState(0);
-  const [quiz2, setQuiz2] = useState(0);
-  const [quiz3, setQuiz3] = useState(0);
-  const [quiz4, setQuiz4] = useState(0);
-  const [answer, setAnswer] = useState(0);
+  const [quiz1, setQuiz1] = useState(1);
+  const [quiz2, setQuiz2] = useState(1);
+  const [quiz3, setQuiz3] = useState(1);
+  const [quiz4, setQuiz4] = useState(1);
+  const [answer, setAnswer] = useState(1);
   const [correct, setCorrect] = useState('');
 
   const restQuiz = () => {
