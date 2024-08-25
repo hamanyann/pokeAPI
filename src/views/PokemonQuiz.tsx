@@ -23,7 +23,7 @@ const PokemonQuiz = ({ count, onClick }: PokemonProps) => {
   return (
     <>
       <div className="flex flex-col items-center ">
-        <button className="text-3xl " onClick={onClick}>
+        <button className="text-3xl border-2 border-black p-2 w-60" onClick={onClick}>
           {pokemonName}
         </button>
       </div>

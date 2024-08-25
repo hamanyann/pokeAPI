@@ -30,7 +30,10 @@ const Pokemon = ({ count }: PokemonProps) => {
           Loading...
         </div>
       ) : pokemon ? (
-        <img className="w-[96px] h-[96px]" src={pokemon} />
+        <>
+          <img className="w-[96px] h-[96px]" src={pokemon} />
+         
+        </>
       ) : (
         <p>no image...</p>
       )}

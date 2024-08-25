@@ -5,6 +5,7 @@ import Quiz from './quiz/Quiz';
 function App() {
   const [showCount, setShowCount] = useState(false);
   const [showQuiz, setShowQuiz] = useState(false);
+
   const handleToggleCount = () => {
     setShowCount(!showCount);
   };
@@ -16,15 +17,28 @@ function App() {
   return (
     <>
       {!showCount && !showQuiz && (
-        <>
-          <button className='bg-red-500 ' onClick={handleToggleCount}>カウントアプリSTART</button>
-          <button className='bg-green-500' onClick={handleToggleQuiz}>クイズアプリSTART</button>
-        </>
+        <div className="flex flex-col items-center">
+          <p className="text-3xl mt-20">ポケモンAPIアプリ</p>
+          <div className="flex justify-center items-center mt-20 font-bold">
+            <button
+              className="bg-red-500 w-[150px] h-[150px] mr-4 "
+              onClick={handleToggleCount}
+            >
+              カウントアプリSTART
+            </button>
+            <button
+              className="bg-green-500 w-[150px] h-[150px]"
+              onClick={handleToggleQuiz}
+            >
+              クイズアプリSTART
+            </button>
+          </div>
+        </div>
       )}
 
-      {showCount && <Count />}
+      {showCount && <Count onClick={handleToggleCount} />}
 
-      {showQuiz && <Quiz />}
+      {showQuiz && <Quiz onClick={handleToggleQuiz} />}
     </>
   );
 }
